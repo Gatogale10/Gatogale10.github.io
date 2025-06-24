@@ -1,94 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Diagrama de Voronoi - CDMX</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/d3-delaunay@6/d3-delaunay.min.js"></script>
-  <style>
-    #map {
-      height: 100vh;
-      width: 100%;
-    }
-    canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Ubicación Estación de Policía</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Estilos de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-top: 20px;
+            border: 2px solid #444;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
 
-<div id="map"></div>
-<canvas id="voronoi-canvas"></canvas>
+    <p>Para este caso la solución obvia es poner una estación de policía en la colonia Doctores para que se tenga una mejor cobertura y el problema aparentemente estaría solucionado, pero tenemos que tomar en cuenta factores como la ubicación de la estación, la viabilidad y otros.</p>
+    
+    <h2>La ubicación propuesta es la siguiente:</h2>
+    
+    <!-- Mapa -->
+    <div id="map"></div>
+    
+    <p>Se escogió analizando los espacios libres en la zona y que fuera un espacio en donde la cobertura de atención fuera buena.</p>
+    
+    <!-- Script de Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('map').setView([19.421097, -99.137862], 16);
 
-<script>
-  // Crear mapa centrado en la Ciudad de México
-  const map = L.map('map').setView([19.4326, -99.1332], 12);
+        // Capa de mapa base
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
-
-  const canvas = document.getElementById('voronoi-canvas');
-  const ctx = canvas.getContext('2d');
-  let points = [];
-
-  function updateCanvasSize() {
-    const size = map.getSize();
-    canvas.width = size.x;
-    canvas.height = size.y;
-  }
-
-  map.on('resize move zoom', () => {
-    updateCanvasSize();
-    drawVoronoi();
-  });
-
-  updateCanvasSize();
-
-  map.on('click', function(e) {
-    const latlng = e.latlng;
-    points.push(latlng);
-    drawVoronoi();
-  });
-
-  function drawVoronoi() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    if (points.length < 2) return;
-
-    const projectedPoints = points.map(p => map.latLngToContainerPoint(p));
-    const delaunay = d3.Delaunay.from(projectedPoints.map(p => [p.x, p.y]));
-    const voronoi = delaunay.voronoi([0, 0, canvas.width, canvas.height]);
-
-    for (let i = 0; i < projectedPoints.length; i++) {
-      const cell = voronoi.cellPolygon(i);
-      if (cell) {
-        ctx.beginPath();
-        ctx.moveTo(cell[0][0], cell[0][1]);
-        for (const [x, y] of cell.slice(1)) {
-          ctx.lineTo(x, y);
-        }
-        ctx.closePath();
-        ctx.strokeStyle = "#000";
-        ctx.lineWidth = 1;
-        ctx.stroke();
-        ctx.fillStyle = "rgba(100, 150, 255, 0.2)";
-        ctx.fill();
-      }
-    }
-
-    for (const p of projectedPoints) {
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, 4, 0, 2 * Math.PI);
-      ctx.fillStyle = "red";
-      ctx.fill();
-    }
-  }
-</script>
+        // Marcador
+        L.marker([19.421097, -99.137862]).addTo(map)
+            .bindPopup('Ubicación propuesta: Colonia Doctores')
+            .openPopup();
+    </script>
 
 </body>
 </html>
+

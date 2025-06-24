@@ -1,9 +1,6 @@
 <!DOCTYPE HTML>
-<!--
-	Future Imperfect by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
+
 <html>
 	<head>
 		<title>Portafolio de proyectosaaas</title>
@@ -22,6 +19,19 @@
 		<script id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
+
+<!-- Estilos de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-top: 20px;
+            border: 2px solid #444;
+            border-radius: 10px;
+        }
+    </style>
 	</head>
 
 	<body class="single is-preload">
@@ -229,10 +239,47 @@
 							en febrero de 2025 inició más de 2298 carpetas de investigación en esta demarcación, frente a 2133 en Iztapalapa ,Colonias críticas incluyen Centro, Doctores, Guerrero, Morelos, Roma Norte y Obrera</p>
 							
 
+							<p> Esta zona unicamente cuenta con dos estaciones de policia cercanas, la estación del policia del centro y la estación de la Roma, en el siguiente diagrama de Voronoi podemos ver estas estaciones e igualmente estaciones cercanas a las mismas.</p>
+							<a href="ProyectosPersonales/Diagramasdevoroi.html" class="image featured2"><img src="CDMXDoctores.jpg" alt="" /></a>
+							
+							<p>En el siguiente mapa podemos notar que a pesar de que la colonia Roma y Condesa cuentan con una cobertura buena por la estación de policias que se encuntre ahí, siguen contando con un alto numero de crimenes; esto podría deberse tanto a la alta cantidad de habitantes de la zona, las condiciones socio economicas o a una mala distrubución de los cuadrantes de la policia y los rondines que se realizan.</p>
+							<p>Pero podemos notar algo interesante, que la colonia Doctores se encuentra casi a la mayor distancia de cobertura(dada por el diagrama de Voronoi) de las dos estaciones y esta zona lleva muchos años siendo una de las estaciones con mayor numero de crimenes en la ciudad de México.</p>
+							<h1>En el siguiente codigo en Colab se podra como se realizo el mapa anterior.</h1>
+							<ul class="actions">
+									<li><a href="https://colab.research.google.com/drive/1eXP7ORZ5hGZM5KZwNeGv724nNmELPjPA?usp=sharing" class="button">Codigo</a></li>
+							</ul>
+
+							<p>Para este caso la solución obvia es poner una estación de policía en la colonoia Doctores para que se tenga una mejor cobertura y el problema aparentemente estaria solucionado,pero tenemos que tomar en cuenta factores como la ubicación de la estación, la viabilidad y otros.</p>
+							<h2>La ubicación propuesta es la siguiente:</h2>
+
+							<!-- Mapa -->
+    <div id="map"></div>
+    
+    
+    <!-- Script de Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('map').setView([19.421097, -99.137862], 16);
+
+        // Capa de mapa base
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Marcador
+        L.marker([19.421097, -99.137862]).addTo(map)
+            .bindPopup('Ubicación propuesta: Colonia Doctores')
+            .openPopup();
+    </script>
 
 
+							<p>Se escogio analizando los espacios libres en la zona y que fuera un espacio en donde la cubertura de atención fuera buena.</p>
 
-								</section>
+							<p>Lo siguiente por hacer es analizar si existe una mejor configuración en general de tres estaciones que atiendan las zonas con mayor número de crimenes sin dejar de lado a las demas zonas que ya cuentan con una buena seguridad</p>
+
+							<p>Y tambien analizar otras zonas vulnerables para proponer tanto estaciones de policias que maximizan respecto a la cobertura como los cuadrantes de la policía en estas zonas.</p>
+
+						</section>
 								
 								<footer>
 									<ul class="stats">
