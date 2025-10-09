@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Playground CSS Grid</title>
+<style>
+  :root {
+    --w: 900px;
+    --h: 520px;
+    --gap: 14px;
+    --cols: 1fr 1fr;     /* cambia a 2fr 1fr, 300px 1fr, etc. */
+    --rows: auto 1fr;    /* cambia a 120px 1fr, 30% 70%, 1fr 1fr, etc. */
+  }
+
+  body { margin: 0; padding: 24px; font: 16px/1.4 system-ui, sans-serif; background: #f6f7fb; }
+
+  .grid-demo {
+    display: grid;
+    grid-template-columns: var(--cols);
+    grid-template-rows: var(--rows);
+    grid-template-areas:
+      "header header"
+      "left   right";
+    gap: var(--gap);
+    width: var(--w);
+    height: var(--h);
+    margin: 0 auto;
+    border: 2px solid #222;
+    background: white;
+  }
+
+  .grid-demo > * {
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    border-radius: 12px;
+  }
+  .total  {grid-area:header; background-color: aquamarine;}
+  .header { place-items: center; background: #cfe8ff; }
+  .left   { grid-area: left;   background: #d7f5d7; }
+  .right  { grid-area: right;  background: #ffd2ce; }
+
+  /* Ejemplo de alineaciones internas del grid completo: */
+  /* .grid-demo { justify-content: center; align-content: center; } */
+
+  /* Ejemplo de alineación de ítems (contenido dentro de cada celda): */
+  /* .grid-demo { justify-items: start; align-items: start; } */
+</style>
+</head>
+<body>
+  <h1>Playground CSS Grid</h1>
+  <p>Modifica las variables en <code>:root</code> para personalizar columnas, filas, gap, ancho/alto.</p>
+  <div class="grid-demo">
+
+    <div class="total">
+        <!--Dividir en dos el encabezado -->
+        <header class="header">Encabezado</header>
+    </div>
+
+    <section class="left">Izquierda</section>
+    <section class="right">Derecha</section>
+  </div>
+</body>
+</html>
