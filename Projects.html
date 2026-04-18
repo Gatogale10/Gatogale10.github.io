@@ -1,49 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Jorge Gael</title>
-
-    <link rel="icon" type="png|image" href="/IMAGES/sailogo.png">
-    <link rel="stylesheet" href="/CSS/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Jorge Gael</title>
+  <link rel="icon" type="image/png" href="/IMAGES/sailogo.png" />
+  <link rel="stylesheet" href="/CSS/style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 <body>
 
-    <canvas id="matrixCanvas"></canvas>
-                                                        <!-- Matrix -->
-    <script src="/JAVASCRIPT/matrix.js"></script>
+  <canvas id="matrixCanvas"></canvas>
+  <script src="/JAVASCRIPT/matrix.js"></script>
 
-    <header class="header">
-        <a href="#" class="logo">{Portfolio |Study blog} </a>
+  <!-- HEADER -->
+  <header class="header">
+    <a href="index.html" class="logo">{jgael.sec}</a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="Skills.html">Skills</a>
+      <a href="Studyblog.html">Study Blog</a>
+      <a href="Projects.html" class="active">Projects</a>
+    </nav>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </header>
+  <nav class="nav-mobile" id="navMobile">
+    <a href="index.html">Home</a>
+    <a href="Skills.html">Skills</a>
+    <a href="Studyblog.html">Study Blog</a>
+    <a href="Projects.html" class="active">Projects</a>
+  </nav>
 
-        <nav class="navbar">
-            <a href="index.html" style="--i:1;" class="active">Home</a>
-            <a href="Skills.html" style="--i:2;">Skills/Certifications</a>
-            <a href="Studyblog.html" style="--i:3;">Study blog</a>
-            <a href="Projects.html" style="--i:4;">Proyects</a>
-            
-        </nav>
-    </header>
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <h1>Projects <span>&</span> Practice</h1>
+    <p>Personal projects and labs in Red Team, Blue Team, advanced cryptography, and more — built as part of my learning journey toward Security Architect.</p>
+  </div>
 
-    <div class="titulogeneral">
-        <h1 >Proyects & practice</h1>
-               
+  <!-- PROJECTS CONTENT -->
+  <div class="content-wrap">
+
+    <!--
+    ════════════════════════════════════════════════════════
+    HOW TO ADD A NEW PROJECT
+    ════════════════════════════════════════════════════════
+    1. Copia el bloque <article class="project-card"> de abajo.
+    2. Pégalo AL INICIO de .projects-grid (los más nuevos primero).
+    3. Edita estos campos:
+       - project-type class: usa "red" / "blue" / "crypto" / "web"
+       - project-type text: RED TEAM / BLUE TEAM / CRYPTO / WEB
+       - href de los links: URL a GitHub y demo (si no tienes, borra el <a>)
+       - project-title: nombre del proyecto
+       - project-desc: qué hace, para qué sirve, qué aprendiste
+       - project-stack spans: herramientas y lenguajes usados
+    ════════════════════════════════════════════════════════
+    -->
+
+    <div class="projects-grid">
+
+      <!-- ── PROJECT 1: ECDSA Tool (paper FTC 2025) ───────────────── -->
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-type crypto">CRYPTO</span>
+          <div class="project-links">
+            <a href="https://github.com/Gatogale10" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+          </div>
+        </div>
+        <h2 class="project-title">Modular Tool for Exploring ECDSA</h2>
+        <p class="project-desc">
+          Python-based modular implementation of the Elliptic Curve Digital Signature Algorithm (ECDSA).
+          Supports multiple curves, signature generation/verification, and vulnerability exploration.
+          Presented at the Future Technologies Conference (FTC) 2025 in Munich.
+        </p>
+        <div class="project-stack">
+          <span>Python</span>
+          <span>ECDSA</span>
+          <span>Elliptic Curves</span>
+          <span>Linux</span>
+        </div>
+      </article>
+
+      <!-- ── PROJECT 2: CIC Research ───────────────────────────────── -->
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-type crypto">CRYPTO</span>
+          <div class="project-links">
+            <a href="https://github.com/Gatogale10" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+          </div>
+        </div>
+        <h2 class="project-title">Cryptographic Algorithms in C/C++</h2>
+        <p class="project-desc">
+          Development of cryptographic primitives using C/C++ for both Linux and Windows environments
+          as part of research work at Centro de Investigación en Computación (CIC-IPN).
+          Focused on performance benchmarking and correctness verification.
+        </p>
+        <div class="project-stack">
+          <span>C</span>
+          <span>C++</span>
+          <span>Linux</span>
+          <span>Windows</span>
+        </div>
+      </article>
+
+      <!-- ── PROJECT TEMPLATE (copia desde aquí) ───────────────────── -->
+      <!--
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-type [red|blue|crypto|web]">[RED TEAM / BLUE TEAM / CRYPTO / WEB]</span>
+          <div class="project-links">
+            <a href="[URL_GITHUB]" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+            <a href="[URL_DEMO]"   target="_blank" title="Demo"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+        <h2 class="project-title">[Nombre del Proyecto]</h2>
+        <p class="project-desc">[Descripción: qué hace, objetivo, qué aprendiste — 2-4 oraciones.]</p>
+        <div class="project-stack">
+          <span>[Tool 1]</span>
+          <span>[Tool 2]</span>
+          <span>[Language]</span>
+        </div>
+      </article>
+      -->
+      <!-- ── FIN DEL TEMPLATE ────────────────────────────────────── -->
+
+      <!-- PLACEHOLDER -->
+      <article class="project-card" style="opacity:0.4; pointer-events:none;">
+        <div class="project-header">
+          <span class="project-type red">RED TEAM</span>
+        </div>
+        <h2 class="project-title">Próximo proyecto...</h2>
+        <p class="project-desc">D</p>
+        <div class="project-stack"><span>coming soon</span></div>
+      </article>
+
+    </div><!-- /projects-grid -->
+  </div><!-- /content-wrap -->
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer-copy">© 2025 Jorge Gael Lopez Figueras</p>
+    <div class="footer-links">
+      <a href="https://github.com/Gatogale10" target="_blank">GitHub</a>
+      <a href="mailto:jlopezf2002@alumno.ipn.mx">Email</a>
     </div>
+  </footer>
 
-    <div class="centrar">
-        <div class="textogeneral">
-        
-        <h3>Here are some personal projects and practice developed as part of my learning journey. You'll find work related to Red Team, Blue Team, advanced cryptography, and more.</h3>
+  <script>
+    const ham = document.getElementById('hamburger');
+    const nav = document.getElementById('navMobile');
+    ham.addEventListener('click', () => { ham.classList.toggle('open'); nav.classList.toggle('open'); });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { ham.classList.remove('open'); nav.classList.remove('open'); }));
+  </script>
 
-    </div>
-    </div>
-   
-
-
-</body> 
-</html> 
+</body>
+</html>

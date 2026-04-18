@@ -1,49 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Jorge G</title>
-
-    <link rel="icon" type="png|image" href="/IMAGES/sailogo.png">
-    <link rel="stylesheet" href="/CSS/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Jorge Gael</title>
+  <link rel="icon" type="image/png" href="/IMAGES/sailogo.png" />
+  <link rel="stylesheet" href="/CSS/style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 <body>
 
-    <canvas id="matrixCanvas"></canvas>
-                                                        <!-- Matrix -->
-    <script src="/JAVASCRIPT/matrix.js"></script>
+  <canvas id="matrixCanvas"></canvas>
+  <script src="/JAVASCRIPT/matrix.js"></script>
 
-    <header class="header">
-        <a href="#" class="logo">{Portfolio |Study blog} </a>
+  <!-- HEADER -->
+  <header class="header">
+    <a href="index.html" class="logo">{jgael.sec}</a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="Skills.html" class="active">Skills</a>
+      <a href="Studyblog.html">Study Blog</a>
+      <a href="Projects.html">Projects</a>
+    </nav>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </header>
+  <nav class="nav-mobile" id="navMobile">
+    <a href="index.html">Home</a>
+    <a href="Skills.html" class="active">Skills</a>
+    <a href="Studyblog.html">Study Blog</a>
+    <a href="Projects.html">Projects</a>
+  </nav>
 
-        <nav class="navbar">
-            <a href="index.html" style="--i:1;" class="active">Home</a>
-            <a href="Skills.html" style="--i:2;">Skills/Certifications</a>
-            <a href="Studyblog.html" style="--i:3;">Study blog</a>
-            <a href="Projects.html" style="--i:4;">Proyects</a>
-            
-        </nav>
-    </header>
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <h1>Skills <span>&</span> Certifications</h1>
+    <p>Technical skills developed throughout my learning journey in cybersecurity, mathematics, and software development.</p>
+  </div>
 
-    <div class="titulogeneral">
-        <h1 >Skills</h1>
-               
+  <!-- CONTENT -->
+  <div class="content-wrap">
+
+    <!-- ── PROGRAMMING LANGUAGES ────────────────────────────────── -->
+    <!--
+    HOW TO ADD A SKILL BAR:
+    Copia un <div class="skill-item"> y edita:
+    - skill-name: nombre de la habilidad
+    - skill-pct: porcentaje de dominio (e.g. 80%)
+    - style="--pct: 80%": mismo número que arriba
+    -->
+    <div class="skills-section">
+      <h3 class="skills-section-title">Programming Languages</h3>
+      <div class="skills-grid">
+
+        <div class="skill-item">
+          <div class="skill-top">
+            <span class="skill-name">Python</span>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:85%"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-top">
+            <span class="skill-name">C / C++</span>
+            <span class="skill-pct">65%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:65%"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-top">
+            <span class="skill-name">Bash / Shell</span>
+            <span class="skill-pct">60%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:60%"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-top">
+            <span class="skill-name">HTML / CSS / JS</span>
+            <span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:75%"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-top">
+            <span class="skill-name">SQL (MySQL / PostgreSQL)</span>
+            <span class="skill-pct">55%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:55%"></div></div>
+        </div>
+
+      </div>
     </div>
 
-    <div class="centrar">
-        <div class="textogeneral">
-        
-        <h2>Skills Developed Throughout My Learning Journey:</h2>
+    <!-- ── CYBERSECURITY TOOLS ───────────────────────────────────── -->
+    <div class="skills-section">
+      <h3 class="skills-section-title">Cybersecurity Tools</h3>
+      <div class="skills-grid">
 
+        <div class="skill-item">
+          <div class="skill-top">
+            <span class="skill-name">Nmap</span>
+            <span class="skill-pct">70%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:70%"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-top">
+            <span class="skill-name">Wireshark</span>
+            <span class="skill-pct">65%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:65%"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-top">
+            <span class="skill-name">Metasploit</span>
+            <span class="skill-pct">50%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:50%"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-top">
+            <span class="skill-name">Linux (Kali / Ubuntu)</span>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:80%"></div></div>
+        </div>
+
+      </div>
     </div>
+
+    <!-- ── CERTIFICATIONS ────────────────────────────────────────── -->
+    <!--
+    HOW TO ADD A CERTIFICATION:
+    Copia un <div class="cert-item"> y edita:
+    - cert-name: nombre completo de la certificación
+    - cert-issuer: institución y año
+    - cert-badge: etiqueta corta (COMPLETED / IN PROGRESS / PLANNED)
+    -->
+    <div class="skills-section">
+      <h3 class="skills-section-title">Certifications & Courses</h3>
+      <div class="cert-list">
+
+        <div class="cert-item">
+          <div>
+            <p class="cert-name">Fundamentals of Network Security</p>
+            <p class="cert-issuer">CIC-IPN · Jun – Aug 2025</p>
+          </div>
+          <span class="cert-badge">COMPLETED</span>
+        </div>
+
+        <div class="cert-item">
+          <div>
+            <p class="cert-name">Paper: A Modular Tool for Exploring ECDSA</p>
+            <p class="cert-issuer">FTC 2025 · Munich, Germany · Nov 2025</p>
+          </div>
+          <span class="cert-badge">PUBLISHED</span>
+        </div>
+
+        <div class="cert-item">
+          <div>
+            <p class="cert-name">Research Assistant — Cryptographic Algorithms</p>
+            <p class="cert-issuer">CIC-IPN · Oct 2024 – Mar 2025</p>
+          </div>
+          <span class="cert-badge">COMPLETED</span>
+        </div>
+
+        <!-- TEMPLATE (descomenta para agregar):
+        <div class="cert-item">
+          <div>
+            <p class="cert-name">[Nombre de la certificación]</p>
+            <p class="cert-issuer">[Institución · Año]</p>
+          </div>
+          <span class="cert-badge">[COMPLETED / IN PROGRESS / PLANNED]</span>
+        </div>
+        -->
+
+      </div>
     </div>
-   
 
+  </div><!-- /content-wrap -->
 
-</body> 
-</html> 
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer-copy">© 2025 Jorge Gael Lopez Figueras</p>
+    <div class="footer-links">
+      <a href="https://github.com/Gatogale10" target="_blank">GitHub</a>
+      <a href="mailto:jlopezf2002@alumno.ipn.mx">Email</a>
+    </div>
+  </footer>
+
+  <script>
+    const ham = document.getElementById('hamburger');
+    const nav = document.getElementById('navMobile');
+    ham.addEventListener('click', () => { ham.classList.toggle('open'); nav.classList.toggle('open'); });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { ham.classList.remove('open'); nav.classList.remove('open'); }));
+  </script>
+
+</body>
+</html>

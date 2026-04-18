@@ -1,91 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Jorge G</title>
-
-    <link rel="icon" type="png|image" href="/IMAGES/Logoportafolio.png">
-    <link rel="stylesheet" href="/CSS/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Jorge Gael</title>
+  <link rel="icon" type="image/png" href="/IMAGES/Logoportafolio.png" />
+  <link rel="stylesheet" href="/CSS/style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 </head>
 <body>
 
-    <canvas id="matrixCanvas"></canvas>
-                                                        <!-- Matrix -->
-    <script src="/JAVASCRIPT/matrix.js"></script>
+  <!-- Matrix background animation -->
+  <canvas id="matrixCanvas"></canvas>
+  <script src="/JAVASCRIPT/matrix.js"></script>
 
-    <header class="header">
-        <a href="#" class="logo">{Portfolio |Study blog} </a>
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <a href="index.html" class="logo">{jgael.sec}</a>
 
-        <nav class="navbar">
-            <a href="index.html" style="--i:1;" class="active">Home</a>
-            <a href="Skills.html" style="--i:2;">Skills/Certifications</a>
-            <a href="Studyblog.html" style="--i:3;">Study blog</a>
-            <a href="Projects.html" style="--i:4;">Proyects</a>
-            
-        </nav>
-    </header>
+    <!-- Desktop nav -->
+    <nav class="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="Skills.html">Skills</a>
+      <a href="Studyblog.html">Study Blog</a>
+      <a href="Projects.html">Projects</a>
+    </nav>
 
-    <section id="home" class="home">
- 
-        <div class="home-content" data-scroll data-scroll-speed="-5" >
-            <h3 class="mu">Hello, It's me</h3>
-            <h1>Jorge Gael</h1>
-            <h3>And I'm a <span class="pro-text">
-                <script>
-                   var typed = new Typed(".pro-text", {
-                      strings: [
-                        "Ethical Hacker",
-                        "Mathematics student",
-                        "Programmer",
-                        "Linux Administrator",
-                        "Web Developer",
-                        "Research assitant"
-                      ],
-                      typeSpeed: 100,   
-                      backSpeed: 100,   
-                      backDelay: 1000,  
-                      loop: true        
-                    });
-                </script>
-            </span></h3>
-            
-            <p>
-         &emsp; &emsp;This website reflects my passion for cybersecurity and cryptography. It features a personal learning blog
-        where I document my journey toward becoming a Cybersecurity Architect.<br><br>
-        &emsp; &emsp;You will also find practical exercises and projects designed to demonstrate my technical skills and contribute to the broader security community.
+    <!-- Mobile hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile nav dropdown -->
+  <nav class="nav-mobile" id="navMobile">
+    <a href="index.html" class="active">Home</a>
+    <a href="Skills.html">Skills</a>
+    <a href="Studyblog.html">Study Blog</a>
+    <a href="Projects.html">Projects</a>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home">
+    <div class="home-inner">
+
+      <!-- Left: text -->
+      <div class="home-content">
+        <p class="home-tag">// Ethical Hacker · Math Student · IPN</p>
+        <h1>Jorge <em>Gael</em><br>Lopez F.</h1>
+
+        <p class="home-subtitle">
+          &gt; <span class="typed-text"></span>
+          <script>
+            new Typed(".typed-text", {
+              strings: ["Ethical Hacker_", "Mathematics Student_", "Linux Administrator_", "Cryptography Researcher_", "Web Developer_"],
+              typeSpeed: 80,
+              backSpeed: 50,
+              backDelay: 1200,
+              loop: true
+            });
+          </script>
         </p>
-            
 
-            
-            
+        <p>
+          Passionate about cybersecurity and cryptography. I document my learning journey
+          toward becoming a Security Architect — from foundational exploits to advanced
+          cryptographic protocols. Currently a Research Assistant at CIC-IPN, published
+          at FTC 2025 Munich.
+        </p>
 
-            <div class="home-sci">
-                <a href="https://github.com/Gatogale10" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="https://www.linkedin.com/in/jorgegael-lf/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
-                <a href="https://wa.me/5665343764" target="_blank"><i class='bx bxl-whatsapp'></i></a>
-                
-            </div>
-           <a href="" class="btn-box" download="CV_Jorge_Gael_Cybersecurity.pdf">Download CV</a>
+        <div class="home-actions">
+          <a href="Projects.html" class="btn-primary">View Projects</a>
+          <a href="/CV_Jorge_Gael_Cybersecurity.pdf" class="btn-outline" download>Download CV</a>
         </div>
 
-        <div class="home-img">
-            <div class="glowing-circle">
-                <span></span>
-                <span></span>
-                <div class="image">
-                    <img src="/IMAGES/saianon.png" alt="">
-                </div>
-            </div>
+        <div class="home-sci">
+          <a href="https://github.com/Gatogale10" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+          <a href="https://www.linkedin.com/in/jorgegael-lf/" target="_blank" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+          <a href="https://wa.me/5665343764" target="_blank" title="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
         </div>
+      </div>
 
-    </section>
+      <!-- Right: avatar -->
+      <div class="home-img">
+        <div class="glowing-circle">
+          <span></span>
+          <span></span>
+          <div class="image">
+            <img src="/IMAGES/saianon.png" alt="Jorge Gael" />
+          </div>
+        </div>
+      </div>
 
-    
+    </div>
+  </section>
 
-</body> 
-</html> 
+  <!-- ===== STATS SECTION ===== -->
+  <!--
+    HOW TO EDIT STATS:
+    Cambia los números o etiquetas en los .stat-item de abajo.
+    Puedes agregar más stat-items copiando uno de los bloques existentes.
+  -->
+  <div class="stats-section">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <span class="stat-number">9.4</span>
+        <span class="stat-label">GPA · IPN</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">1</span>
+        <span class="stat-label">Intl. Paper</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">5+</span>
+        <span class="stat-label">Security Tools</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Languages</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== INTERESTS SECTION ===== -->
+  <!--
+    HOW TO ADD AN INTEREST:
+    Copia el bloque <div class="interest-card"> y pégalo al final de .interests-grid.
+    Cambia el emoji, título y descripción.
+  -->
+  <div class="interests-section">
+    <div class="section-header">
+      <span class="section-label">// Áreas de enfoque</span>
+      <h2 class="section-title">Donde viven mis intereses</h2>
+    </div>
+
+    <div class="interests-grid">
+
+      <div class="interest-card">
+        <span class="interest-icon">🔐</span>
+        <h3>Criptografía</h3>
+        <p>Implementación y análisis de algoritmos criptográficos modernos: ECDSA, AES, RSA y protocolos de curva elíptica.</p>
+      </div>
+
+      <div class="interest-card">
+        <span class="interest-icon">🎯</span>
+        <h3>Ethical Hacking</h3>
+        <p>Pentesting, análisis de vulnerabilidades y técnicas de Red Team con herramientas como Nmap, Metasploit y Wireshark.</p>
+      </div>
+
+      <div class="interest-card">
+        <span class="interest-icon">🐧</span>
+        <h3>Linux Administration</h3>
+        <p>Administración avanzada de sistemas Linux, scripting con Bash, hardening y configuración de redes seguras.</p>
+      </div>
+
+      <div class="interest-card">
+        <span class="interest-icon">📐</span>
+        <h3>Matemáticas Aplicadas</h3>
+        <p>Teoría de la información, álgebra abstracta y modelos matemáticos aplicados a la seguridad computacional.</p>
+      </div>
+
+      <div class="interest-card">
+        <span class="interest-icon">🔬</span>
+        <h3>Investigación en Seguridad</h3>
+        <p>Publicación e investigación en criptografía aplicada, con énfasis en herramientas modulares para análisis de protocolos.</p>
+      </div>
+
+      <div class="interest-card">
+        <span class="interest-icon">🌐</span>
+        <h3>Redes & Protocolos</h3>
+        <p>Análisis de tráfico, configuración de redes TCP/IP, detección de intrusiones y seguridad en capa de transporte.</p>
+      </div>
+
+      <div class="interest-card">
+        <span class="interest-icon">🤖</span>
+        <h3>Automatización</h3>
+        <p>Desarrollo de scripts y herramientas en Python y C/C++ para automatizar tareas de seguridad y análisis de datos.</p>
+      </div>
+
+      <div class="interest-card">
+        <span class="interest-icon">🛡️</span>
+        <h3>Blue Team & Defensa</h3>
+        <p>Análisis forense, respuesta a incidentes, monitoreo de sistemas y estrategias de defensa proactiva.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p class="footer-copy">© 2025 Jorge Gael Lopez Figueras — Security & Math</p>
+    <div class="footer-links">
+      <a href="https://github.com/Gatogale10" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/jorgegael-lf/" target="_blank">LinkedIn</a>
+      <a href="mailto:jlopezf2002@alumno.ipn.mx">Email</a>
+    </div>
+  </footer>
+
+  <!-- Hamburger JS -->
+  <script>
+    const ham = document.getElementById('hamburger');
+    const nav = document.getElementById('navMobile');
+    ham.addEventListener('click', () => {
+      ham.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+    // close on link click
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      ham.classList.remove('open');
+      nav.classList.remove('open');
+    }));
+  </script>
+
+</body>
+</html>
