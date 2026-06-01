@@ -4,11 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Jorge Gael</title>
+
   <link rel="icon" type="image/png" href="/IMAGES/Logoportafolio.png" />
   <link rel="stylesheet" href="/CSS/style.css" />
+
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 </head>
+
 <body>
 
   <!-- Matrix background animation -->
@@ -17,7 +20,9 @@
 
   <!-- ===== HEADER ===== -->
   <header class="header">
-    <a href="index.html" class="logo">{jgael.sec}</a>
+
+    <!-- CAMBIO DE LOGO -->
+    <a href="index.html" class="logo">{jorgegael.dev}</a>
 
     <!-- Desktop nav -->
     <nav class="navbar">
@@ -29,11 +34,13 @@
 
     <!-- Mobile hamburger -->
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
   </header>
 
-  <!-- Mobile nav dropdown -->
+  <!-- Mobile nav -->
   <nav class="nav-mobile" id="navMobile">
     <a href="index.html" class="active">Home</a>
     <a href="Skills.html">Skills</a>
@@ -43,18 +50,35 @@
 
   <!-- ===== HERO SECTION ===== -->
   <section id="home">
+
     <div class="home-inner">
 
-      <!-- Left: text -->
+      <!-- LEFT -->
       <div class="home-content">
-        <p class="home-tag">// Ethical Hacker · Math Student · IPN</p>
-        <h1>Jorge <em>Gael</em><br>Lopez F.</h1>
 
+        <!-- NUEVO TAG -->
+        <p class="home-tag">
+          | Aspiring Cybersecurity Analyst · Applied Mathematics Graduate · IPN-ESFM
+        </p>
+
+        <h1>
+          Jorge <em>Gael</em><br>
+          Lopez F.
+        </h1>
+
+        <!-- TYPED TEXT NUEVO -->
         <p class="home-subtitle">
           &gt; <span class="typed-text"></span>
+
           <script>
             new Typed(".typed-text", {
-              strings: ["Ethical Hacker_", "Mathematics Student_", "Linux Administrator_", "Cryptography Researcher_", "Web Developer_"],
+              strings: [
+              "Cybersecurity Learner_",
+              "Linux & Networking Enthusiast_",
+              "HTB Academy Student_",
+              "Applied Mathematics Graduate_",
+              "Future Security Analyst_"
+              ],
               typeSpeed: 80,
               backSpeed: 50,
               backDelay: 1200,
@@ -63,33 +87,66 @@
           </script>
         </p>
 
-        <p>
-          Passionate about cybersecurity and cryptography. I document my learning journey
-          toward becoming a Security Architect — from foundational exploits to advanced
-          cryptographic protocols. Currently a Research Assistant at CIC-IPN, published
-          at FTC 2025 Munich.
+        <!-- NUEVO PÁRRAFO -->
+        <p class="about-me">
+          Applied Mathematics graduate from IPN currently transitioning into
+          Cybersecurity through hands-on labs, technical projects, and continuous
+          learning.
+
+          My current focus includes Linux, networking, web security, Active
+          Directory, Python scripting, and cybersecurity fundamentals. I document
+          my learning journey through technical notes, practical exercises, and
+          public repositories while developing skills for a professional career in
+          cybersecurity.
         </p>
 
+        <!-- BUTTONS -->
         <div class="home-actions">
-          <a href="Projects.html" class="btn-primary">View Projects</a>
-          <a href="/CV_Jorge_Gael_Cybersecurity.pdf" class="btn-outline" download>Download CV</a>
+          <a href="Projects.html" class="btn-primary">
+            View Projects
+          </a>
+
+          <a href="/CV_Jorge_Gael_Data.pdf"
+             class="btn-outline"
+             download>
+             Download CV
+          </a>
         </div>
 
+        <!-- SOCIAL -->
         <div class="home-sci">
-          <a href="https://github.com/Gatogale10" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
-          <a href="https://www.linkedin.com/in/jorgegael-lf/" target="_blank" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
-          <a href="https://wa.me/5665343764" target="_blank" title="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
+
+          <a href="https://github.com/Gatogale10"
+             target="_blank"
+             title="GitHub">
+            <i class='bx bxl-github'></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/jorgegael-lf/"
+             target="_blank"
+             title="LinkedIn">
+            <i class='bx bxl-linkedin'></i>
+          </a>
+
+          <a href="https://wa.me/5665343764"
+             target="_blank"
+             title="WhatsApp">
+            <i class='bx bxl-whatsapp'></i>
+          </a>
+
         </div>
       </div>
 
-      <!-- Right: avatar -->
+      <!-- RIGHT IMAGE -->
       <div class="home-img">
+
         <div class="glowing-circle">
+
           <span></span>
           <span></span>
-          <div class="image">
-            <img src="/IMAGES/saianon.png" alt="Jorge Gael" />
-          </div>
+
+          
+
         </div>
       </div>
 
@@ -97,92 +154,139 @@
   </section>
 
   <!-- ===== STATS SECTION ===== -->
-  <!--
-    HOW TO EDIT STATS:
-    Cambia los números o etiquetas en los .stat-item de abajo.
-    Puedes agregar más stat-items copiando uno de los bloques existentes.
-  -->
   <div class="stats-section">
+
     <div class="stats-inner">
+
       <div class="stat-item">
-        <span class="stat-number">9.4</span>
-        <span class="stat-label">GPA · IPN</span>
+        <span class="stat-number">9.31/10</span>
+        <span class="stat-label">GPA Graduate · IPN</span>
       </div>
+
       <div class="stat-item">
-        <span class="stat-number">1</span>
-        <span class="stat-label">Intl. Paper</span>
+        <span class="stat-number">6+</span>
+        <span class="stat-label">Months as a Cybersecurity Analyst</span>
       </div>
+
       <div class="stat-item">
-        <span class="stat-number">5+</span>
-        <span class="stat-label">Security Tools</span>
+        <span class="stat-number">100+</span>
+        <span class="stat-label">Study Hours</span>
       </div>
+
       <div class="stat-item">
-        <span class="stat-number">3</span>
-        <span class="stat-label">Languages</span>
+        <span class="stat-number">3+</span>
+        <span class="stat-label">Learning Plataforms</span>
       </div>
+
     </div>
   </div>
 
   <!-- ===== INTERESTS SECTION ===== -->
-  <!--
-    HOW TO ADD AN INTEREST:
-    Copia el bloque <div class="interest-card"> y pégalo al final de .interests-grid.
-    Cambia el emoji, título y descripción.
-  -->
   <div class="interests-section">
+
     <div class="section-header">
-      <span class="section-label">// Áreas de enfoque</span>
-      <h2 class="section-title">Donde viven mis intereses</h2>
+      <span class="section-label"> Areas of Interest</span>
+      <h2 class="section-title">
+        Technical Interests & Learning Path
+      </h2>
     </div>
 
     <div class="interests-grid">
 
-      <div class="interest-card">
-        <span class="interest-icon">🔐</span>
-        <h3>Criptografía</h3>
-        <p>Implementación y análisis de algoritmos criptográficos modernos: ECDSA, AES, RSA y protocolos de curva elíptica.</p>
-      </div>
-
-      <div class="interest-card">
-        <span class="interest-icon">🎯</span>
-        <h3>Ethical Hacking</h3>
-        <p>Pentesting, análisis de vulnerabilidades y técnicas de Red Team con herramientas como Nmap, Metasploit y Wireshark.</p>
-      </div>
-
+      <!-- Linux -->
       <div class="interest-card">
         <span class="interest-icon">🐧</span>
-        <h3>Linux Administration</h3>
-        <p>Administración avanzada de sistemas Linux, scripting con Bash, hardening y configuración de redes seguras.</p>
+
+        <h3>Linux</h3>
+
+        <p>
+        Learning Linux administration, command-line workflows, Bash scripting,
+        system enumeration, and security-focused Linux concepts.
+        </p>
       </div>
 
-      <div class="interest-card">
-        <span class="interest-icon">📐</span>
-        <h3>Matemáticas Aplicadas</h3>
-        <p>Teoría de la información, álgebra abstracta y modelos matemáticos aplicados a la seguridad computacional.</p>
-      </div>
-
-      <div class="interest-card">
-        <span class="interest-icon">🔬</span>
-        <h3>Investigación en Seguridad</h3>
-        <p>Publicación e investigación en criptografía aplicada, con énfasis en herramientas modulares para análisis de protocolos.</p>
-      </div>
-
-      <div class="interest-card">
-        <span class="interest-icon">🌐</span>
-        <h3>Redes & Protocolos</h3>
-        <p>Análisis de tráfico, configuración de redes TCP/IP, detección de intrusiones y seguridad en capa de transporte.</p>
-      </div>
-
+      <!-- AI -->
       <div class="interest-card">
         <span class="interest-icon">🤖</span>
-        <h3>Automatización</h3>
-        <p>Desarrollo de scripts y herramientas en Python y C/C++ para automatizar tareas de seguridad y análisis de datos.</p>
+
+        <h3>Networking</h3>
+
+        <p>
+          Studying TCP/IP, DNS, HTTP, SMB, routing, packet analysis, and network
+          protocols used in modern cybersecurity environments.
+        </p>
       </div>
 
+      <!-- WEB SECURITY -->
+      <div class="interest-card">
+        <span class="interest-icon">⚙️</span>
+
+        <h3>Web Security</h3>
+
+        <p>
+          Learning web application security concepts including SQL Injection,
+          Cross-Site Scripting, authentication vulnerabilities, and OWASP Top 10.
+        </p>
+      </div>
+
+      <!-- CYBERSECURITY -->
       <div class="interest-card">
         <span class="interest-icon">🛡️</span>
-        <h3>Blue Team & Defensa</h3>
-        <p>Análisis forense, respuesta a incidentes, monitoreo de sistemas y estrategias de defensa proactiva.</p>
+
+        <h3>Active Directory</h3>
+
+        <p>
+          Exploring Windows environments, authentication mechanisms, AD
+          enumeration, and common enterprise attack paths.
+        </p>
+      </div>
+
+      <!-- SECURITY TOOLS -->
+      <div class="interest-card">
+        <span class="interest-icon">🔐</span>
+
+        <h3>Security Tools</h3>
+
+        <p>
+          Linux administration, Bash scripting,
+          system configuration, and command-line workflows.
+        </p>
+      </div>
+
+      <!-- PYTHON FOR SECURITY -->
+      <div class="interest-card">
+        <span class="interest-icon">📐</span>
+
+        <h3>Python for Security</h3>
+
+        <p>
+          Developing scripts and automation tools for networking, enumeration,
+          data processing, and cybersecurity-related tasks.
+        </p>
+      </div>
+
+      <!-- CRYPTOGRAPHY -->
+      <div class="interest-card">
+        <span class="interest-icon">🔐</span>
+
+        <h3>Cryptography</h3>
+
+        <p>
+          Interest in cryptographic systems, digital signatures, hashing,
+          encryption schemes, and their practical security applications.
+        </p>
+      </div>
+
+      <!-- RESEARCH -->
+      <div class="interest-card">
+        <span class="interest-icon">🔬</span>
+
+        <h3>Research & Documentation</h3>
+
+        <p>
+          Documenting labs, technical notes, writeups, and learning progress
+          through GitHub repositories and public technical content.
+        </p>
       </div>
 
     </div>
@@ -190,27 +294,48 @@
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <p class="footer-copy">© 2025 Jorge Gael Lopez Figueras — Security & Math</p>
+
+    <p class="footer-copy">
+      © 2026 Jorge Gael Lopez Figueras — Aspiring Cybersecurity Professional
+    </p>
+
     <div class="footer-links">
-      <a href="https://github.com/Gatogale10" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/jorgegael-lf/" target="_blank">LinkedIn</a>
-      <a href="mailto:jlopezf2002@alumno.ipn.mx">Email</a>
+
+      <a href="https://github.com/Gatogale10"
+         target="_blank">
+         GitHub
+      </a>
+
+      <a href="https://www.linkedin.com/in/jorgegael-lf/"
+         target="_blank">
+         LinkedIn
+      </a>
+
+      <a href="mailto:jorgegael235@gmail.com">
+        Email
+      </a>
+
     </div>
   </footer>
 
-  <!-- Hamburger JS -->
+  <!-- ===== MOBILE MENU JS ===== -->
   <script>
+
     const ham = document.getElementById('hamburger');
     const nav = document.getElementById('navMobile');
+
     ham.addEventListener('click', () => {
       ham.classList.toggle('open');
       nav.classList.toggle('open');
     });
-    // close on link click
-    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      ham.classList.remove('open');
-      nav.classList.remove('open');
-    }));
+
+    nav.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => {
+        ham.classList.remove('open');
+        nav.classList.remove('open');
+      })
+    );
+
   </script>
 
 </body>
